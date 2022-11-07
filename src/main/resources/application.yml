@@ -1,0 +1,24 @@
+server:
+  port: 8083
+
+management:
+  health:
+    rabbit:
+      enabled: false
+
+logging:
+  level:
+    io:
+      pivotal: DEBUG
+    com:
+      netflix: INFO
+    org:
+      springframework:
+        web: INFO
+        cloud: WARN
+
+# disable the hystrix streaming on rabbit locally
+hystrix:
+  stream:
+    queue:
+      enabled: false

@@ -36,13 +36,6 @@ public class QuoteServiceTest {
     private static final String QUOTE_URL = "quoteUrl";
     private static final String COMPANY_URL = "companyUrl";
 
-    /**
-     * @Value("${pivotal.quotes.quote_url}") protected String quote_url;
-     * @Value("${pivotal.quotes.quotes_url}") protected String quotes_url;
-     * @Value("${pivotal.quotes.companies_url}") protected String company_url;
-     */
-
-
     @InjectMocks
     private QuoteService service;
 

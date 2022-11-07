@@ -5,7 +5,6 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import io.pivotal.quotes.domain.*;
 import io.pivotal.quotes.exception.SymbolNotFoundException;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -24,13 +23,10 @@ import java.util.*;
 @Slf4j
 public class QuoteService {
 
-	@Value("${pivotal.quotes.quote_url}")
 	protected String quote_url;
 
-	@Value("${pivotal.quotes.quotes_url}")
 	protected String quotes_url;
 
-	@Value("${pivotal.quotes.companies_url}")
 	protected String company_url;
 
 	public static final String FMT = "json";
